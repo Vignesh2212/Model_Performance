@@ -1,23 +1,13 @@
 import os
 import streamlit as st
 import numpy as np
-from PIL import  Image
 
 # Custom imports
 from multipage import MultiPage
-from pages import define_windows, data_upload, machine_learning, metadata, data_visualize, redundant # import your pages here
+from pages import define_windows, data_upload, metadata, machine_learning, data_visualize, redundant
 
 # Create an instance of the app
 app = MultiPage()
-
-# Title of the main page
-#display = Image.open('Logo.png')
-#display = np.array(display)
-# st.image(display, width = 400)
-# st.title("Data Storyteller Application")
-#col1, col2 = st.beta_columns(2)
-#col1.image(display, width = 400)
-#col2.title("Data Storyteller Application")
 
 # Add all your application here
 app.add_page("Define Time Window", define_windows.app)
